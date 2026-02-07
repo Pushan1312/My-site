@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Yay!</title>
+
+<style>
+body{
+    background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+    font-family: Arial, sans-serif;
+    text-align:center;
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+img{
+    width:300px;
+    height:300px;
+    object-fit:cover;
+    border-radius:20px;
+    border:4px solid #ff4d6d;
+    margin-bottom:20px;
+    animation: fade 2s ease;
+}
+
+h1{
+    font-size:32px;
+    color:#ff4d6d;
+    animation: fade 3s ease;
+}
+
+@keyframes fade{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+/* Floating hearts */
+.heart{
+    position:absolute;
+    color: rgba(255,0,80,0.6);
+    font-size: 20px;
+    animation: float 6s linear infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(100vh);}
+    100%{transform:translateY(-10vh);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🎵 Background Song -->
+<audio autoplay loop>
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Replace with your image -->
+<img src="image.jpeg" alt="Your Image">
+
+<h1>Best decision ever!! I love you the most. ❤️
+Chalo abb Date Par. See you! ;) </h1>
+<p> You are the most important person in my life and regardless of what happens in future, you will still remain to be the person whom I cherish the most. I will be there beside you, if you need me or not. Despite every possibilities, I really wish that we remain in each other's life. Cheers to a better life and more. Take Love from an engineer.</p>
+<p>Yours truly,</p>
+<p>A Dick-Holder</p>
+
+<script>
+/* Hearts generator */
+setInterval(()=>{
+    const heart=document.createElement("div");
+    heart.className="heart";
+    heart.innerHTML="❤️";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=Math.random()*25+10+"px";
+    document.body.appendChild(heart);
+    setTimeout(()=>heart.remove(),6000);
+},300);
+</script>
+
+</body>
+</html>
